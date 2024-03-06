@@ -29,7 +29,6 @@ export class PostgresCartStore
 
       return cart;
     } catch (err) {
-      console.log(err);
       throw new StatusError(500, "Error adding cart", {
         originalError: err,
       });
@@ -113,7 +112,6 @@ export class PostgresCartStore
 
       return cart;
     } catch (err) {
-      console.log(err);
       throw new StatusError(500, "Error adding product to cart", {
         originalError: err,
       });
