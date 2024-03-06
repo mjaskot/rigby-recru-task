@@ -1,0 +1,16 @@
+{
+  "type": "postgres",
+  "host": "postgras",
+  "port": 3306,
+  "username": "rigby_user",
+  "password": "S3cret",
+  "database": "rigby_db",
+  "synchronize": true,
+  "entities": [
+    "src/../**/*.entity.{js,ts}"
+  ],
+  "subscribers": [],
+  "migrations": [
+    "src/migration/*.ts"
+  ]
+}

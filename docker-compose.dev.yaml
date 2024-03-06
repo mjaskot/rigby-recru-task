@@ -1,0 +1,33 @@
+services:
+  backend:
+    container_name: rigby-backend
+    tty: true
+    volumes:
+      - ./:/app
+    build:
+      context: ./
+    env_file:
+      - ".env"
+    ports:
+      - "3000:3000"
+    networks:
+      - rigby
+    restart: "always"
+    command: sh -c "yarn dev"
+
+  postgres:
+    image: postgres:14-alpine
+    ports:
+      - 5432:5432
+    volumes:
+      - ~/apps/postgres:/var/lib/postgresql/data
+    networks:
+      - rigby
+    environment:
+      - POSTGRES_PASSWORD=S3cret
+      - POSTGRES_USER=rigby_user
+      - POSTGRES_DB=rigby_db
+
+networks:
+  rigby:
+    driver: bridge

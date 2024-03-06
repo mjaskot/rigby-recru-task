@@ -27,5 +27,3 @@ Implementacja obliczania całkowitej wartości koszyka.
 - Użyj dowolnej bazy danych.
 - Zapewnij prostą walidację danych wejściowych.
 - Napisz kilka testów jednostkowych pokrywających kluczowe elementy logiki.
-# rigby-recru-task
-# rigby-recru-task
